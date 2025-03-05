@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .section-bg {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        .section-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: brightness(70%);
+            z-index: -1;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: gold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+       
+        #home { background-image: url('img/berlin-4577495_1280.jpg'); }
+        #bedroom { background-image: url('img/bedroom-image.avif'); }
+        #dining { background-image: url('img/dining-image.avif'); }
+        #kitchen { background-image: url('img/kitchen-image.avif'); }
+        #contact { background-image: url('img/contact-image.avif'); }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigatsiya -->
+    <nav class="fixed top-0 w-full bg-black bg-opacity-60 p-4 px-20 text-white flex flex-col md:flex-row justify-between items-center z-10">
+        <h1 class="text-3xl font-bold text-yellow-400 mb-2 md:mb-0">HOTEL</h1>
+        <ul class="flex  md:flex-row md:space-y-0 md:space-x-6 gap-5">
+            <li><a href="#home" class="pb-2 nav-link text-lg cursor-pointer">HOME</a></li>
+            <li><a href="#bedroom" class="pb-2 nav-link text-lg cursor-pointer">BEDROOM</a></li>
+            <li><a href="#dining" class="pb-2 nav-link text-lg cursor-pointer">DINING</a></li>
+            <li><a href="#kitchen" class="pb-2 nav-link text-lg cursor-pointer">KITCHEN</a></li>
+            <li><a href="#contact" class="pb-2 nav-link text-lg cursor-pointer">CONTACT</a></li>
+        </ul>
+    </nav>
+
+   
+    <section id="home" class="section-bg relative flex flex-col items-center justify-center text-white text-center px-4">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 pt-20 animate-fade-in">DESIGN YOUR HOTEL</h2>
+        <p class="text-base sm:text-lg md:text-xl mb-6 max-w-xs sm:max-w-md md:max-w-lg">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sed nostrum repellendus nam. Mollitia aliquam officia itaque assumenda autem iure!
+        </p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <button class="border-2 border-yellow-400 hover:bg-yellow-400 text-white px-6 py-3 rounded-full transition duration-300">Watch More</button>
+            <button class="border-2 border-yellow-400 hover:bg-yellow-400 text-white px-6 py-3 rounded-full transition duration-300">Rent Rooms</button>
+        </div>
+    </section>
+
+ 
+    <section id="bedroom" class="section-bg relative flex items-center">
+        <div class="w-full md:w-1/2 text-white p-10 bg-black bg-opacity-50">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">BEDROOM DESIGN</h2>
+            <p class="text-lg md:text-xl mb-6">
+                Relax in our luxurious bedrooms crafted for ultimate comfort.
+            </p>
+            <button class="border-2 border-white hover:bg-white hover:text-black text-white px-8 py-3 rounded-md transition duration-300">Explore Rooms</button>
+        </div>
+    </section>
+
+  
+    <section id="dining" class="section-bg relative py-20">
+        <div class="container mx-auto text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-10">DINING EXPERIENCE</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+                <div class="bg-black bg-opacity-60 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Fine Dining</h3>
+                    <p>Enjoy gourmet meals in an elegant setting.</p>
+                </div>
+                <div class="bg-black bg-opacity-60 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Casual Dining</h3>
+                    <p>Relax with friends over delicious food.</p>
+                </div>
+                <div class="bg-black bg-opacity-60 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Outdoor Seating</h3>
+                    <p>Dine under the stars with a stunning view.</p>
+                </div>
+            </div>
+            <button class="mt-10 border-2 border-yellow-400 hover:bg-yellow-400 text-black px-8 py-3 rounded-full transition duration-300">View Menu</button>
+        </div>
+    </section>
+
+   
+    <section id="kitchen" class="section-bg relative flex items-center justify-end">
+        <div class="w-full md:w-1/2 text-white p-10 bg-black bg-opacity-50 text-right">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">KITCHEN FACILITIES</h2>
+            <p class="text-lg md:text-xl mb-6">
+                State-of-the-art kitchens for an exceptional experience.
+            </p>
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-md transition duration-300">Learn More</button>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section-bg relative flex items-center justify-center py-20">
+        <div class="bg-black bg-opacity-70 p-10 rounded-lg text-white w-full max-w-lg">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center">CONTACT US</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400">
+                <input type="email" placeholder="Your Email" class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400">
+                <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400"></textarea>
+                <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-md transition duration-300">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+ 
+    
+</body>
+</html>
