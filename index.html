@@ -51,25 +51,48 @@
         #dining { background-image: url('img/dining-image.avif'); }
         #kitchen { background-image: url('img/kitchen-image.avif'); }
         #contact { background-image: url('img/contact-image.avif'); }
+
+        @media (min-width: 490px) {
+    .nav-ul {
+        flex-direction: row;
+       
+    }
+   
+}
     </style>
 </head>
 <body class="font-sans">
     <!-- Navigatsiya -->
     <nav class="fixed top-0 w-full bg-black bg-opacity-60 p-4 px-20 text-white flex flex-col md:flex-row justify-between items-center z-10">
         <h1 class="text-3xl font-bold text-yellow-400 mb-2 md:mb-0">HOTEL</h1>
-        <ul class="flex  md:flex-row md:space-y-0 md:space-x-6 gap-5">
-            <li><a href="#home" class="pb-2 nav-link text-lg cursor-pointer">HOME</a></li>
-            <li><a href="#bedroom" class="pb-2 nav-link text-lg cursor-pointer">BEDROOM</a></li>
-            <li><a href="#dining" class="pb-2 nav-link text-lg cursor-pointer">DINING</a></li>
-            <li><a href="#kitchen" class="pb-2 nav-link text-lg cursor-pointer">KITCHEN</a></li>
-            <li><a href="#contact" class="pb-2 nav-link text-lg cursor-pointer">CONTACT</a></li>
+        <ul class="flex  sm:flex-row gap-5 sm:space-y-0 sm:space-x-6   px-4">
+            <li><a href="#home" class="pb-2 nav-link text-lg cursor-pointer block w-full text-center py-2 hover:bg-gray-100 custom-text-shrink">HOME</a></li>
+            <li><a href="#bedroom" class="pb-2 nav-link text-lg cursor-pointer block w-full text-center py-2 hover:bg-gray-100 custom-text-shrink">BEDROOM</a></li>
+            <li><a href="#dining" class="pb-2 nav-link text-lg cursor-pointer block w-full text-center py-2 hover:bg-gray-100 custom-text-shrink">DINING</a></li>
+            <li><a href="#kitchen" class="pb-2 nav-link text-lg cursor-pointer block w-full text-center py-2 hover:bg-gray-100 custom-text-shrink">KITCHEN</a></li>
+            <li><a href="#contact" class="pb-2 nav-link text-lg cursor-pointer block w-full text-center py-2 hover:bg-gray-100 custom-text-shrink">CONTACT</a></li>
         </ul>
+        
+        <style>
+        @media (max-width: 440px) {
+            .custom-text-shrink {
+                font-size: 0.875rem; /* Matches Tailwind's text-sm (14px) */
+                line-height: 1.25rem;
+            }
+        }
+        @media (max-width: 375px) {
+            .custom-text-shrink {
+                font-size: 0.800rem;
+                line-height: 1rem;
+            }
+        }
+        </style>
     </nav>
 
    
     <section id="home" class="section-bg relative flex flex-col items-center justify-center text-white text-center px-4">
-        <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 pt-20 animate-fade-in">DESIGN YOUR HOTEL</h2>
-        <p class="text-base sm:text-lg md:text-xl mb-6 max-w-xs sm:max-w-md md:max-w-lg">
+        <h2 class="text-4xl sm:text-5xl sm:text-6xl font-bold mb-4 pt-20 animate-fade-in">DESIGN YOUR HOTEL</h2>
+        <p class="text-base sm:text-lg sm:text-xl mb-6 max-w-xs sm:max-w-md md:max-w-lg">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sed nostrum repellendus nam. Mollitia aliquam officia itaque assumenda autem iure!
         </p>
         <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -136,6 +159,9 @@
     </section>
 
  
+
+
+    <script src="app.js"></script>
     
 </body>
 </html>
